@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Website || TailwindCSS</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-green-950 w-full top-0 left-0 z-50">
+    <header class="navbar">
+      <nav
+        class="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4"
+      >
+        <!-- Logo -->
+        <div
+          class="font-Lobster text-2xl sm:text-3xl lg:text-4xl text-white font-bold"
+        >
+          IndorePlants.
+        </div>
+
+        <!-- Navigation Menu -->
+        <div
+          id="nav-menu"
+          class="absolute top-0 left-0 min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 transform -translate-x-full lg:relative lg:top-auto lg:left-auto lg:min-h-0 lg:w-auto lg:bg-transparent lg:backdrop-blur-0 lg:translate-x-0 lg:flex"
+        >
+          <ul class="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+            <li>
+              <a
+                href="#home"
+                class="nav__link text-lg lg:text-xl text-white font-semibold"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav__link text-lg lg:text-xl text-white font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#popular"
+                class="nav__link text-lg lg:text-xl text-white font-semibold"
+                >Popular</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                class="nav__link text-lg lg:text-xl text-white font-semibold"
+                >Review</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hamburger Button (Visible only on small screens) -->
+        <div class="text-xl sm:text-3xl cursor-pointer z-50 lg:hidden">
+          <i class="ri-menu-4-line text-white" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Home Section -->
+    <section id="home" class="relative">
+      <div class="container">
+        <!-- blub__1 -->
+        <div
+          class="w-64 h-64 bg-green-700 rounded-full blur-3xl -z-10 opacity-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        ></div>
+
+        <div class="flex flex-col items-center gap-5 lg:flex-row">
+          <!-- !Content -->
+          <div class="w-full space-y-5 lg:w-1/2">
+            <h1>
+              <span class="text-yellow-500">Plants</span> make a <br />
+              positive
+              <span class="text-yellow-500">impact</span> on <br />
+              your environment
+            </h1>
+            <p class="text-slate-300 font-Lobster">
+              Plants purify the air by absorbing carbon dioxide and releasing
+              oxygen. 🍃✨ They create a peaceful and refreshing environment,
+              reducing stress and boosting well-being. 🌿💚 By preventing soil
+              erosion and supporting wildlife, plants help maintain ecological
+              balance. 🌎🌱
+            </p>
+            <div
+              class="flex flex-col gap-2 sm:flex-row md:gap-4 lg:pt-5 xl:pt-10"
+            >
+              <button class="btn">
+                <span>Shop Now</span>
+                <i class="ri-leaf-line"></i>
+              </button>
+              <button class="btn btn_outline">
+                <span>Know More</span>
+                <i class="ri-leaf-line"></i>
+              </button>
+            </div>
+            <p class="text-xs font-Lobster text-slate-300">
+              You will get 30-days free trial.
+            </p>
+            <div
+              class="flex items-center gap-5 text-lg hover:cursor-pointer lg:pt-10"
+            >
+              <i
+                class="ri-facebook-fill text-slate-300 hover:text-yellow-500 duration-300"
+              ></i>
+              <i
+                class="ri-twitter-x-line text-slate-300 hover:text-yellow-500 duration-300"
+              ></i>
+              <i
+                class="ri-instagram-line text-slate-300 hover:text-yellow-500 duration-300"
+              ></i>
+              <i
+                class="ri-linkedin-fill text-slate-300 hover:text-yellow-500 duration-300"
+              ></i>
+            </div>
+          </div>
+          <!-- ?imgage -->
+          <div class="w-full relative lg:w-1/2">
+            <img src="./assets/img/home.png" alt="home__img" />
+            <!-- leaf -->
+            <div
+              class="absolute -top-10 right-0 opacity-30 animate-moveingY xl:top-5"
+            >
+              <i class="ri-leaf-line text-6xl text-yellow-500"></i>
+            </div>
+            <!-- flower -->
+            <div
+              class="absolute bottom-0 opacity-30 xl:bottom-12 animate-rotating"
+            >
+              <i class="ri-flower-line text-6xl text-yellow-500"></i>
+            </div>
+            <!-- plant -->
+            <div class="absolute -top-8 -left-5 opacity-30 animate-scalingUp">
+              <i
+                class="hidden lg:block ri-plant-line text-6xl text-yellow-500"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- !Services Section -->
+    <div class="bg-white text-green-900 py-20">
+      <div
+        class="container w-full grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <!-- card___1 -->
+        <div
+          class="border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+        >
+          <div class="flex items-center gap-5 text-3xl md:text-4xl xl:text-5xl">
+            <i class="ri-truck-line"></i>
+            <p class="md:text-lg font-bold">
+              Fast <br />
+              Delivery
+            </p>
+          </div>
+          <p class="font-Lobster">
+            Get your orders delivered at lightning speed with our fast delivery
+            service! 🚀 No more waiting—just quick, reliable, and hassle-free
+            shipping!
+          </p>
+        </div>
+
+        <!-- card___2 -->
+        <div
+          class="border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+        >
+          <div class="flex items-center gap-5 text-3xl md:text-4xl xl:text-5xl">
+            <i class="ri-customer-service-line"></i>
+            <p class="md:text-lg font-bold">
+              Great Customer <br />
+              Service
+            </p>
+          </div>
+          <p class="font-Lobster">
+            "Experience top-notch customer support that truly cares! 😊 We're
+            here to assist you with quick responses and hassle-free solutions,
+            every step of the way!"
+          </p>
+        </div>
+
+        <!-- card___3 -->
+        <div
+          class="border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+        >
+          <div class="flex items-center gap-5 text-3xl md:text-4xl xl:text-5xl">
+            <i class="ri-plant-line"></i>
+            <p class="md:text-lg font-bold">
+              Original <br />
+              Plants
+            </p>
+          </div>
+          <p class="font-Lobster">
+            Enhance your space with 100% original, fresh, and healthy plants! 🌿
+            Bring nature indoors with real greenery that thrives beautifully!
+          </p>
+        </div>
+
+        <!-- card___4 -->
+        <div
+          class="border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+        >
+          <div class="flex items-center gap-5 text-3xl md:text-4xl xl:text-5xl">
+            <i class="ri-money-dollar-circle-line"></i>
+            <p class="md:text-lg font-bold">
+              Affordable <br />
+              Price
+            </p>
+          </div>
+          <p class="font-Lobster">
+            Enjoy top-quality products at prices that fit your budget! 💰 Get
+            the best deals without compromising on quality—affordable shopping
+            made easy!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- !About Section -->
+    <section id="about" class="relative overflow-hidden">
+      <div class="absolute -top-8 -right-12 opacity-50">
+        <img
+          src="assets/img/leaf-3.png"
+          alt="leaf img"
+          class="w-40 md:w-52 xl:w-64"
+        />
+      </div>
+      <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20">
+        <h2 class="title">About Us</h2>
+        <p class="max-w-2xl">Follow instruction for more</p>
+      </div>
+      <div class="container space-y-10 xl:space-y-0">
+        <!-- item1 -->
+        <div class="flex flex-col items-center lg:flex-row gap-5">
+          <!-- image -->
+          <div class="w-full lg:w-1/2">
+            <img
+              src="assets/img/plant-1.png"
+              alt="about__img"
+              class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto"
+            />
+          </div>
+          <!-- content -->
+          <div class="w-full lg:w-1/2">
+            <div class="space-y-5">
+              <h3>
+                Make your <span class="text-yellow-500">organic</span> <br />
+                garden
+              </h3>
+              <p class="text-slate-300 font-Lobster">
+                Create your own organic garden by using natural compost and
+                chemical-free soil. Grow fresh vegetables, herbs, and fruits
+                while promoting a healthy ecosystem. Enjoy homegrown produce
+                that’s nutritious, eco-friendly, and full of flavor! 🌿🍅
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- item2 -->
+        <div class="flex flex-col items-center lg:flex-row-reverse gap-5">
+          <!-- image -->
+          <div class="w-full lg:w-1/2">
+            <img
+              src="assets/img/plant-2.png"
+              alt="about__img"
+              class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto"
+            />
+          </div>
+          <!-- content -->
+          <div class="w-full lg:w-1/2">
+            <div class="space-y-5">
+              <h3>
+                Come with us <br />
+                <span class="text-yellow-500">grow up</span>
+                your plant
+              </h3>
+              <p class="text-slate-300 font-Lobster">
+                Join us and nurture your plants with love and care! Watch them
+                grow strong with sunlight, water, and organic nourishment.
+                Together, let's create a greener and healthier environment! 🌱✨
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Popular Section -->
+    <section id="popular" class="bg-green-900">
+      <div class="flex flex-col items-center gap-3 text-center mb-40">
+        <h2 class="title">Your Choice Plant</h2>
+        <p class="max-w-2xl">Follow instruction for more</p>
+      </div>
+      <div
+        class="container w-full grid grid-cols-1 gap-x-8 gap-y-36 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <!-- card1 -->
+        <div class="popular__card bg-green-950 p-10 pt-24 rounded-md relative">
+          <img
+            src="/assets/img/cart-1.png"
+            alt="popular__img"
+            class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500"
+          />
+          <p class="italic">Nephrolepis exaltata</p>
+          <h3>Boston Fern</h3>
+          <div class="text-yellow-500 text-xs py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="popular__card bg-green-950 p-10 pt-24 rounded-md relative">
+          <img
+            src="/assets/img/cart-2.png"
+            alt="popular__img"
+            class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500"
+          />
+          <p class="italic">Ficus elastica</p>
+          <h3>RubberPlant</h3>
+          <div class="text-yellow-500 text-xs py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="popular__card bg-green-950 p-10 pt-24 rounded-md relative">
+          <img
+            src="/assets/img/cart-3.png"
+            alt="popular__img"
+            class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500"
+          />
+          <p class="italic">Spathiphyllum wallisii</p>
+          <h3>Peace Lily</h3>
+          <div class="text-yellow-500 text-xs py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+        <!-- card4 -->
+        <div class="popular__card bg-green-950 p-10 pt-24 rounded-md relative">
+          <img
+            src="/assets/img/cart-4.png"
+            alt="popular__img"
+            class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500"
+          />
+          <p class="italic">Adenium obesum</p>
+          <h3>Desert Rose</h3>
+          <div class="text-yellow-500 text-xs py-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line text-gray-400"></i>
+            <i class="ri-star-line text-gray-400"></i>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl">$5</p>
+            <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+              <i class="ri-shopping-cart-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Review Section -->
+    <section id="review" class="relative mb-20 md:mb-28 overflow-hidden">
+      <div>
+        <img
+          src="assets/img/leaf-4.png"
+          alt="leaf__4"
+          class="w-40 md:w-52 xl:w-64 absolute -top-8 -left-12 opacity-50"
+        />
+      </div>
+      <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20">
+        <h2 class="title">Customer Review</h2>
+        <p class="max-w-2xl">Follow instruction for more</p>
+      </div>
+      <div class="container">
+        <div class="swiper py-12">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p class="font-Lobster">
+                  Customer reviews provide valuable feedback that helps
+                  businesses improve their products and services. Positive
+                  reviews build trust, while negative reviews highlight areas
+                  for improvement.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/img/review-1.jpg"
+                    alt="review__img"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">John doe</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p class="font-Lobster">
+                  Customer reviews provide valuable feedback that helps
+                  businesses improve their products and services. Positive
+                  reviews build trust, while negative reviews highlight areas
+                  for improvement.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/img/review-2.jpg"
+                    alt="review__img"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">John doe</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p class="font-Lobster">
+                  Customer reviews provide valuable feedback that helps
+                  businesses improve their products and services. Positive
+                  reviews build trust, while negative reviews highlight areas
+                  for improvement.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/img/review-3.jpg"
+                    alt="review__img"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">John doe</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p class="font-Lobster">
+                  Customer reviews provide valuable feedback that helps
+                  businesses improve their products and services. Positive
+                  reviews build trust, while negative reviews highlight areas
+                  for improvement.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/img/review-4.jpg"
+                    alt="review__img"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">John doe</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p class="font-Lobster">
+                  Customer reviews provide valuable feedback that helps
+                  businesses improve their products and services. Positive
+                  reviews build trust, while negative reviews highlight areas
+                  for improvement.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/img/review-4.jpg"
+                    alt="review__img"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">John doe</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                <p class="font-Lobster">
+                  Customer reviews provide valuable feedback that helps
+                  businesses improve their products and services. Positive
+                  reviews build trust, while negative reviews highlight areas
+                  for improvement.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/img/review-1.jpg"
+                    alt="review__img"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div class="ml-2">
+                    <p class="text-yellow-500 uppercase">John doe</p>
+                    <p>Designer</p>
+                  </div>
+                  <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!--? Footer -->
+    <footer class="bg-yellow-100 text-green-950 pt-20 pb-10 md:pt-28 relative">
+      <!-- newsLetter -->
+      <div
+        class="container text-white absolute top-0 left-0 right-0 -translate-y-1/2"
+      >
+        <div class="bg-green-900 px-10 pb-10 space-y-5 rounded-md pt-5">
+          <h3>
+            <span class="text-yellow-500">Subscribe</span> to our newsletter
+          </h3>
+          <div class="flex flex-col md:flex-row gap-1">
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="w-full px-5 py-3 text-green-900 rounded-md outline-none"
+            />
+            <button
+              class="flex items-center gap-1 bg-green-950 px-5 py-3 rounded-md hover:opacity-80 duration-300 justify-center"
+            >
+              <span> Subscribe </span>
+              <i class="ri-send-plane-2-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- social icons -->
+      <div class="container mt-16 mb-10">
+        <div class="border-b border-green-500 relative">
+          <div
+            class="absolute top-0 -translate-y-1/2 left-0 right-0 max-w-36 mx-auto"
+          >
+            <div class="bg-yellow-100 text-lg text-center space-x-2">
+              <i
+                class="ri-facebook-fill hover:text-yellow-500 hover:cursor-pointer duration-300"
+              ></i>
+              <i
+                class="ri-twitter-x-line hover:text-yellow-500 hover:cursor-pointer duration-300"
+              ></i>
+              <i
+                class="ri-instagram-line hover:text-yellow-500 hover:cursor-pointer duration-300"
+              ></i>
+              <i
+                class="ri-linkedin-fill hover:text-yellow-500 hover:cursor-pointer duration-300"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+      <div
+        class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center md:text-start"
+      >
+        <!-- item1 -->
+        <div>
+          <div class="text-7xl text-green-700 text-center inline-block">
+            <i class="ri-leaf-fill"></i>
+            <p class="font-Lobster text-xl sm:text-2xl">Indore Plants.</p>
+          </div>
+        </div>
+        <!-- item2 -->
+        <div>
+          <p class="mb-5 font-bold text-xl">Quick Link</p>
+          <div class="flex flex-col gap-1">
+            <a href="#">Plants</a>
+            <a href="#"> Flowers</a>
+            <a href="#"> Gerdening</a>
+            <a href="#">Seeds</a>
+            <a href="#"> Shipping</a>
+          </div>
+        </div>
+
+        <!-- item3 -->
+        <div>
+          <p class="mb-5 font-bold text-xl">Popular Services</p>
+          <div class="flex flex-col gap-1">
+            <a href="#">Tree Planting</a>
+            <a href="#">Grass Cutting</a>
+            <a href="#">Weeds Control</a>
+            <a href="#">Project</a>
+          </div>
+        </div>
+
+        <!-- item4 -->
+        <div>
+          <p class="mb-5 font-bold text-xl">Contact Us</p>
+          <div class="flex flex-col gap-1">
+            <a href="#"> +88 333 78 901</a>
+            <a href="#"> lightcodecamp@gmail.com</a>
+            <br />
+            <p>1234 Tailwind Ave, CSS City, Webland 56789, USA</p>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="container">
+        <p class="text-center mt-10 opacity-50">
+          Copyright &copy; 2024 IndorePlants. All rights reserved.
+        </p>
+      </div>
+      <!-- floral image -->
+      <div class="absolute bottom-0 left-0 opacity-20 pointer-events-none">
+        <img src="./assets/img/floral-1.png" alt="" class="w-full lg:w-1/2" />
+      </div>
+    </footer>
+    <!-- !Swiper JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- !Main js -->
+    <script src="main.js"></script>
+  </body>
+</html>
